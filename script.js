@@ -143,8 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Format meta info (Lessons count / Date)
             let metaText = '';
+                        
             if (review.lessons && review.date) {
-                metaText = `${review.lessons} • ${review.date}`;
+                const formattedDate = review.date.replace(/,\s*\d{4}$/, '');
+                metaText = `${review.lessons} • ${formattedDate}`;
+            
             } else if (review.lessons) {
                 metaText = review.lessons;
             } else if (review.date) {

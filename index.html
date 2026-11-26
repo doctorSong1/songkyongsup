@@ -23,6 +23,69 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css"/>
+
+    <!-- WhatsApp Activation & Floating Bubble Styles -->
+    <style>
+        .whatsapp-inline-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background-color: #25D366;
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .whatsapp-inline-link:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-1px);
+        }
+
+        .whatsapp-floating-bubble {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 9999;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 18px;
+            border-radius: 999px;
+            background-color: #25D366;
+            color: #ffffff;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            font-size: 0.94rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-floating-bubble:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(37, 211, 102, 0.42);
+        }
+
+        .whatsapp-floating-bubble i {
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .whatsapp-floating-bubble {
+                right: 16px;
+                bottom: 16px;
+                padding: 12px 15px;
+                font-size: 0.88rem;
+            }
+        }
+    </style>
     
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDXZLTEJ9G"></script>
@@ -352,7 +415,14 @@
                             <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
                             <div>
                                 <h4>WhatsApp</h4>
-                                <p><em>Available upon email request</em></p>
+                                <a
+                                    href="https://wa.me/821090086585?text=Hi%20Teacher%20Song%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20ask%20about%20Korean%20lessons."
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="whatsapp-inline-link"
+                                >
+                                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -401,6 +471,18 @@
             </ul>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Bubble Button -->
+    <a
+        href="https://wa.me/821090086585?text=Hi%20Teacher%20Song%2C%20I%20visited%20songkyongsup.com%20and%20would%20like%20to%20ask%20about%20Korean%20lessons."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-floating-bubble"
+        aria-label="Chat on WhatsApp"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat on WhatsApp</span>
+    </a>
 
     <!-- Custom Script -->
     <script src="script.js"></script>
